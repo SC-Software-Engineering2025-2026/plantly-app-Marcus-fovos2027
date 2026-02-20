@@ -1,12 +1,12 @@
 import { Text, View, StyleSheet } from "react-native";
-import { theme } from "../theme";
+import { theme } from "@/theme";
 
 export default function ProfileScreen() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Profile</Text>
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Profile</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -18,6 +18,5 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
-  }
+  },
 });
-
