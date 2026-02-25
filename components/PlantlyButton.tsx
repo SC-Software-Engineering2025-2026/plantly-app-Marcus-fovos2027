@@ -15,14 +15,15 @@ export function PlantlyButton({ title, onPress }: Props) {
     onPress();
   };
   return (
-    <Pressable 
-    onPress={handlePress} 
-    style={( { pressed}) => {
+    <Pressable
+      onPress={handlePress}
+      style={({ pressed }) => {
         if (pressed) {
-            return [styles.button, styles.buttonPressed]
+          return [styles.button, styles.buttonPressed];
         }
-        return styles.button
-    }}>
+        return styles.button;
+      }}
+    >
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
@@ -41,6 +42,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colorGreen,
   },
   buttonPressed: {
-    backgroundColor: theme.colorLeafyGreen
-  }}
+    backgroundColor: theme.colorLeafyGreen,
+  },
 });
