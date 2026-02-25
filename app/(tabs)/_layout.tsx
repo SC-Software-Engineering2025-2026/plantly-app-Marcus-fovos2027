@@ -18,7 +18,7 @@ export default function Layout() {
         options={{
           title: "Home",
           tabBarShowLabel: false,
-          tabBarIcon: (size, color) => (
+          tabBarIcon: ({ size, color }) => (
             <Entypo name="leaf" size={size} color={color} />
           ),
         }}
@@ -27,7 +27,7 @@ export default function Layout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: (size, color) => (
+          tabBarIcon: ({ size, color }) => (
             <Feather name="user" size={size} color={color} />
           ),
         }}
