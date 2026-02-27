@@ -1,8 +1,7 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import { theme } from "@/theme";
 import { usePlantStore } from "@/store/plantsStore";
-import { FlatList } from "react-native/types_generated/index";
 import { PlantCard } from "@/components/PlantCard";
 import { PlantlyButton } from "@/components/PlantlyButton";
 import { useRouter } from "expo-router";
