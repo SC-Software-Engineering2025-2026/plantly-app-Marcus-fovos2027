@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { theme } from "@/theme";
 import { usePlantStore } from "@/store/plantsStore";
 import { PlantCard } from "@/components/PlantCard";
