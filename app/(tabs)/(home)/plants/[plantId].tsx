@@ -1,5 +1,12 @@
 import { useLocalSearchParams, useNavigation, useRouter } from "expo-router";
-import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  Alert,
+  Linking,
+} from "react-native";
 import { usePlantStore } from "@/store/plantsStore";
 import { differenceInCalendarDays, format } from "date-fns";
 import { PlantlyButton } from "@/components/PlantlyButton";
@@ -19,6 +26,14 @@ export default function PlantDetails() {
     state.plants.find((plant) => String(plant.id) === plantId),
   );
   const navigation = useNavigation();
+
+  useEffect(() => {
+    const getInitial = async () => {
+      const url = await Linking.getInitialURL();
+      console.log(url);
+    };
+    getInitial();
+  });
 
   useEffect(() => {
     navigation.setOptions({
