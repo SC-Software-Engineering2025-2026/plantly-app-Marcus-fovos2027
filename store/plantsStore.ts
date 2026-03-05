@@ -18,7 +18,7 @@ type PlantsState = {
     name: string,
     wateringFrequencyDays: number,
     imageUri?: string,
-  ) => Promise<void>;
+  ) => void;
   removePlant: (plantId: string) => void;
   waterPlant: (plantId: string) => void;
 };
@@ -28,7 +28,7 @@ export const usePlantStore = create(
     (set) => ({
       plants: [],
       nextId: 1,
-      addPlant: (
+      addPlant: async (
         name: string,
         wateringFrequencyDays: number,
         imageUri?: string,
