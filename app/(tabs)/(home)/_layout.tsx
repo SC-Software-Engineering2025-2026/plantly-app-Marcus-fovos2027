@@ -4,7 +4,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import { theme } from "@/theme";
 
 export const unstable_settings = {
-  intitialRouteName: "index",
+  initialRouteName: "index",
 };
 
 export default function Layout() {

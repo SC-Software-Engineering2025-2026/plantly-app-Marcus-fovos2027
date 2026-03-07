@@ -27,13 +27,20 @@ export default function PlantDetails() {
   );
   const navigation = useNavigation();
 
-  useEffect(() => {
-    const getInitial = async () => {
-      const url = await Linking.getInitialURL();
-      console.log(url);
-    };
-    getInitial();
-  });
+  (useEffect(() => {
+    if (params.action === "water") {
+      if (typeof plantId === "string") {
+        waterPlant(plantId);
+      }
+    }
+  }, []),
+    useEffect(() => {
+      const getInitial = async () => {
+        const url = await Linking.getInitialURL();
+        console.log(url);
+      };
+      getInitial();
+    }));
 
   useEffect(() => {
     navigation.setOptions({
